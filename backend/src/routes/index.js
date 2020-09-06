@@ -1,8 +1,9 @@
 /** Contain api routes of the application */
 
-const { Router } = require('express');
+const { Router } = require("express");
 const router = Router();
 
+<<<<<<< HEAD
 const { getUsers, getUserById, createUser, updateUser, deleteUser} = require('../controllers/index.controller');
 
 router.get('/users', getUsers);
@@ -10,5 +11,20 @@ router.get('/users/:id', getUserById);
 router.post('/users', createUser);
 router.put('/users/:id', updateUser);
 router.delete('/users/:id', deleteUser);
+=======
+const {
+  getUsers,
+  getUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+} = require("../controllers/index.controller");
 
-module.exports = router;    
+router.get("/users", getUsers);
+router.get("/users/:id", getUserById);
+router.post("/users", createUser);
+router.put("/users/:id", updateUser);
+router.delete("/users/:id", deleteUser);
+>>>>>>> feature/birth-date
+
+module.exports = router;
