@@ -1,3 +1,4 @@
+-- Used command in postgreSQL
 CREATE DATABASE api;
 
 CREATE TABLE users(
