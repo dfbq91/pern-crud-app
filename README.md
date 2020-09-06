@@ -20,7 +20,7 @@
 
 ## Usage
 
-![Family_tree](/family_tree.gif)
+![Family_tree](https://github.com/dfbq91/family_tree/blob/master/Family_tree.gif)
 
 
 ## Author
