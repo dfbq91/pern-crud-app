@@ -83,7 +83,7 @@ function App() {
   useEffect(() => {
     const getFamilyMembers = async () => {
       const res = await axios.get(
-        `http://${process.env.REACT_APP_IP_SERVER}:${process.env.REACT_APP_PORT}/users`
+        `http://localhost:4000/users`
       );
       setFamilyMembers(res.data);
     };
@@ -107,14 +107,14 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      `http://${process.env.REACT_APP_IP_SERVER}:${process.env.REACT_APP_PORT}/users`,
+      `http://localhost:4000/users`,
       newMember
     );
     if (res.data.name === "error") alert("This member already exists");
     else {
       alert("A new family member has been created");
       const res = await axios.get(
-        `http://${process.env.REACT_APP_IP_SERVER}:${process.env.REACT_APP_PORT}/users`
+        `http://localhost:4000/users`
       );
       setFamilyMembers(res.data);
     }
@@ -123,7 +123,7 @@ function App() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     const res = await axios.put(
-      `http://${process.env.REACT_APP_IP_SERVER}:${process.env.REACT_APP_PORT}/users/` +
+      `http://localhost:4000/users/` +
         actualUpdatingId,
       {
         id: updateMember.updateId,
@@ -137,7 +137,7 @@ function App() {
     else {
       alert("A new family member has been updated");
       const res = await axios.get(
-        `http://${process.env.REACT_APP_IP_SERVER}:${process.env.REACT_APP_PORT}/users`
+        `http://localhost:4000/users`
       );
       setFamilyMembers(res.data);
       handleCloseModal();
@@ -156,12 +156,12 @@ function App() {
   const handleDelete = async (id) => {
     console.log(id);
     await axios.delete(
-      `http://${process.env.REACT_APP_IP_SERVER}:${process.env.REACT_APP_PORT}/users/` +
+      `http://localhost:4000/users/` +
         id
     );
     alert("A family member has been deleted");
     const res = await axios.get(
-      `http://${process.env.REACT_APP_IP_SERVER}:${process.env.REACT_APP_PORT}/users`
+      `http://localhost:4000/users`
     );
     setFamilyMembers(res.data);
   };
