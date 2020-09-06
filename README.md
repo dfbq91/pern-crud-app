@@ -18,6 +18,10 @@
 9) Go to frontend folder and type: `npm install`
 10) Start frontend typing: `npm run start`
 
+## Usage
+
+![Family_tree](/family_tree.gif)
+
 
 ## Author
 
