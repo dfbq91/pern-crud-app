@@ -1,4 +1,4 @@
-<h1 align="center">Family_tree</h1>
+<h1 align="center">PERN CRUD APP</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.2.0-blue.svg?cacheSeconds=2592000" />
 </p>
